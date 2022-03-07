@@ -1,131 +1,66 @@
 {
-
-  "key": "jira-cloud-broker-1",
-
-  "baseUrl": "https://short-horse-12.loca.lt/jiracloudapp",
-
-  "name": "MiniOrange LDAP Connector",
-
-  "enableLicensing": true,
-
-  "authentication": {
-
+ "key": "jira-cloud-broker-1",
+ "baseUrl": "https://short-horse-12.loca.lt/jiracloudapp",
+ "name": "MiniOrange LDAP Connector",
+ "enableLicensing": true,
+ "authentication": {
     "type": "jwt"
-
   },
-
-  "apiMigrations": {
-
+ "apiMigrations": {
     "signed-install": true
-
   },
-
   "lifecycle": {
-
     "installed": "/installed",
-
     "uninstalled": "/uninstalled"
-
   },
-
   "modules": {
-
     "webItems": [
-
       {
-
         "location": "system.preset.filters",
-
         "weight": 200,
-
         "styleClasses": [
-
           "webitem",
-
           "system-present-webitem"
-
         ],
-
         "url": "/my-web-item",
-
         "context": "addon",
-
         "target": {
-
           "type": "page"
-
         },
-
         "tooltip": {
-
           "value": "Example tooltip"
-
         },
-
         "name": {
-
           "value": "My Web Item"
-
         },
-
         "key": "web-item-example"
-
       }
-
     ],
-
     "generalPages": [
-
       {
-
         "key": "thymeleaf-page-jira",
-
         "location": "system.top.navigation.bar",
-
         "name": {
-
           "value": "miniOrange Broker"
-
         },
-
         "url": "/homepage"
-
       },
-
       {
-
         "key": "thymeleaf-page-confluence",
-
         "location": "system.header/left",
-
         "name": {
-
           "value": "miniOrange Broker"
-
         },
-
         "url": "/homepage"
-
       }
-
     ],
-
     "configurePage": {
-
         "url": "/homepage",
-
         "name": {
-
           "value": "miniOrange Broker"
-
         },
-
         "key": "miniOrange-broker"
-
     }
-
   },
-
   "scopes": ["READ", "ADMIN"]
-
 }
